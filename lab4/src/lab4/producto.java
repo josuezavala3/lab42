@@ -1,7 +1,6 @@
 
 package lab4;
 
-<<<<<<< HEAD
 import java.util.Date;
 
 /**
@@ -88,9 +87,5 @@ public class producto{
     public String toString() {
         return "producto{" + "fechaEmision=" + fechaEmision + ", vidaUtil=" + vidaUtil + ", precio=" + precio + ", tama\u00f1o=" + tamaño + ", descripcion=" + descripcion + ", nombre=" + nombre + ", numeroProductos=" + numeroProductos + '}';
     }
-    
-=======
-public class producto {
->>>>>>> 9e2f5f0b5a5c353322cb2a3c71be46bd7e6de211
-    
+
 }
