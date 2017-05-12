@@ -199,7 +199,7 @@ public class Lab4 {
                                     }
                                 } while (bandera);
                             } else if (op == 2) {
-
+                                
                             } else {
 
                             }
