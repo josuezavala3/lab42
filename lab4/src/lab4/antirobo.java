@@ -13,12 +13,12 @@ public class antirobo {
     
     private String vigenere;
     private String adelantar;
-    private 
-    private 
-    private 
-    private 
-    private 
-    private 
+    private String binario;
+
+    public antirobo(String contraseña, String clave) {
+        vigenere=cifradoVigenere
+    }
+    
     
             
 }
