@@ -13,12 +13,6 @@ public class antirobo {
     
     private String vigenere;
     private String adelantar;
-    private 
-    private 
-    private 
-    private 
-    private 
-    private 
     
             
 }

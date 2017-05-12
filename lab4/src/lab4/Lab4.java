@@ -9,6 +9,10 @@ public class Lab4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        binario b=new binario();
+        System.out.println(b.binario("hola"));
+        System.out.println(b.decoBinario(b.binario("hola")));
+        /*
         char r = 's';
         while (r == 's' || r == 'S') {
             System.out.println("1. Almacenes");
@@ -233,7 +237,7 @@ public class Lab4 {
             }
 
         }
-
+        */
     }
 
 }

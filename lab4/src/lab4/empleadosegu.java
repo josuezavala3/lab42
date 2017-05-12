@@ -19,7 +19,8 @@ public class empleadosegu extends persona{
 
     public empleadosegu(int contraseña, int clave, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
         super(nombre, ID, edad, alura, peso, residencia);
-        this.claves = 
+        
+        
         this.dia = dia;
     }
 
