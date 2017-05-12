@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lab4;
 
+<<<<<<< HEAD
 import java.util.Date;
 
 /**
@@ -92,5 +89,8 @@ public class producto{
         return "producto{" + "fechaEmision=" + fechaEmision + ", vidaUtil=" + vidaUtil + ", precio=" + precio + ", tama\u00f1o=" + tamaño + ", descripcion=" + descripcion + ", nombre=" + nombre + ", numeroProductos=" + numeroProductos + '}';
     }
     
+=======
+public class producto {
+>>>>>>> 9e2f5f0b5a5c353322cb2a3c71be46bd7e6de211
     
 }

@@ -9,6 +9,6 @@ package lab4;
  *
  * @author HP
  */
-public class almacenregiio {
-    
+public class almacenregiio extends almacen{
+    private String nombredep;
 }
