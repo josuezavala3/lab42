@@ -10,9 +10,8 @@ public class almacen {
 
     ArrayList<empleado> cl = new ArrayList();
     ArrayList<producto> pro = new ArrayList();
-    ArrayList<antirobo> robo = new ArrayList();
     private double tamano;
     private int altura;
     ArrayList<cliente> cliente = new ArrayList();
-
+    
 }
