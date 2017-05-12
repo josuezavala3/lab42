@@ -11,7 +11,7 @@ package lab4;
  */
 public class cifradoVigenere {
     
-    private String vigenere(String contraseña, String clave){
+    public String vigenere(String contraseña, String clave){
         char[][] tabla = tabla();
         String salida="";
         contraseña.toUpperCase();

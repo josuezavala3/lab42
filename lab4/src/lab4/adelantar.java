@@ -15,7 +15,7 @@ public class adelantar {
     
     static Random r=new Random();
     
-    private String adelantar (String contraseña){
+    public String adelantar (String contraseña){
         int clave=r.nextInt(9)+1;
         String salida="";
         for (int i = 0; i < contraseña.length(); i++) {
@@ -39,7 +39,7 @@ public class adelantar {
         return salida;
     }
     
-    private String decoAdelantar(String contraseña, int llave){
+    public String decoAdelantar(String contraseña, int llave){
         String salida="";
         for (int i = 0; i < contraseña.length(); i++) {
             int letra=contraseña.charAt(i);

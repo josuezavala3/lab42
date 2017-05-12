@@ -1,18 +1,15 @@
 package lab4;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Lab4 {
 
-    /**
-     * @param args the command line arguments
-     */
+    ArrayList <empleado> empleados = new ArrayList();
+    ArrayList <almacen> almacenes=new ArrayList();
+    
     public static void main(String[] args) {
-        binario b=new binario();
-        System.out.println(b.binario("hola"));
-        System.out.println(b.decoBinario(b.binario("hola")));
-        /*
         char r = 's';
         while (r == 's' || r == 'S') {
             System.out.println("1. Almacenes");
@@ -161,47 +158,38 @@ public class Lab4 {
                         }
                     }
                     if (opcio == 1) {
-                        System.out.println("1. Agregar persona");
-                        System.out.println("2. Agregar empleado");
-                        System.out.println("3. Agregar cliente");
-                        System.out.println("4. volver al menu");
+                        System.out.println("1. Agregar empleado");
+                        System.out.println("2. Agregar cliente");
+                        System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
                         if (opc == 1) {
-
+                            
                         } else if (opc == 2) {
-
-                        } else if (opc == 3) {
 
                         } else {
 
                         }
 
                     } else if (opcio == 2) {
-                        System.out.println("1. Modificar persona");
-                        System.out.println("2. Modifciar empleado");
-                        System.out.println("3.Modificar cliente");
-                        System.out.println("4. volver al menu");
+                        System.out.println("1. Modifciar empleado");
+                        System.out.println("2.Modificar cliente");
+                        System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
                         if (opc == 1) {
 
                         } else if (opc == 2) {
-
-                        } else if (opc == 3) {
 
                         } else {
 
                         }
                     } else if (opcio == 3) {
-                        System.out.println("1. Eliminar persona");
-                        System.out.println("2. Eliminar empleado");
-                        System.out.println("3. Eliminar cliente");
-                        System.out.println("4. volver al menu");
+                        System.out.println("1. Eliminar empleado");
+                        System.out.println("2. Eliminar cliente");
+                        System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
                         if (opc == 1) {
 
                         } else if (opc == 2) {
-
-                        } else if (opc == 3) {
 
                         } else {
 
@@ -237,7 +225,7 @@ public class Lab4 {
             }
 
         }
-        */
+
     }
 
 }
