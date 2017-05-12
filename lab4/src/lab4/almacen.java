@@ -1,14 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab4;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author HP
  */
 public class almacen {
-    
+
+    ArrayList<empleado> cl = new ArrayList();
+    ArrayList<producto> pro = new ArrayList();
+    ArrayList<antirobo> robo = new ArrayList();
+    private double tamano;
+    private int altura;
+    ArrayList<cliente> cliente = new ArrayList();
+
 }

@@ -9,6 +9,7 @@ package lab4;
  *
  * @author HP
  */
-public class almacenplata {
+public class almacenplata extends almacen {
+    private int mayorclientes;
     
 }
