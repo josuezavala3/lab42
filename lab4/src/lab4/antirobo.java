@@ -16,7 +16,10 @@ public class antirobo {
     private String binario;
 
     public antirobo(String contraseña, String clave) {
-        vigenere=cifradoVigenere
+        vigenere=new cifradoVigenere().vigenere(contraseña, clave);
+        adelantar=new adelantar().adelantar(contraseña);
+        binario=new binario().binario(contraseña);
+                
     }
     
     

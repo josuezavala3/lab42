@@ -9,12 +9,12 @@ package lab4;
  *
  * @author HP
  */
-public class persona {
+public abstract class persona {
     
     private String nombre;
     private int ID;
     private int edad;
-    private int alura;
+    private int altura;
     private int peso;
     private String residencia;
 
@@ -22,11 +22,13 @@ public class persona {
         this.nombre = nombre;
         this.ID = ID;
         this.edad = edad;
-        this.alura = alura;
+        this.altura = alura;
         this.peso = peso;
         this.residencia = residencia;
     }
 
+    public abstract void modificar();
+    
     public String getNombre() {
         return nombre;
     }
@@ -51,12 +53,12 @@ public class persona {
         this.edad = edad;
     }
 
-    public int getAlura() {
-        return alura;
+    public int getAltura() {
+        return altura;
     }
 
-    public void setAlura(int alura) {
-        this.alura = alura;
+    public void setAltura(int altura) {
+        this.altura = altura;
     }
 
     public int getPeso() {
@@ -77,7 +79,7 @@ public class persona {
 
     @Override
     public String toString() {
-        return "persona{" + "nombre=" + nombre + ", ID=" + ID + ", edad=" + edad + ", alura=" + alura + ", peso=" + peso + ", residencia=" + residencia + '}';
+        return "persona{" + "nombre=" + nombre + ", ID=" + ID + ", edad=" + edad + ", alura=" + altura + ", peso=" + peso + ", residencia=" + residencia + '}';
     }
     
     

@@ -32,6 +32,11 @@ public class empleado extends persona{
     public String toString() {
         return "empleado{" + "sueldo=" + sueldo + '}';
     }
+
+    @Override
+    public void modificar() {
+        
+    }
     
     
 }
