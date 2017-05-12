@@ -11,6 +11,14 @@ package lab4;
  */
 public class antirobo {
     
+    private String vigenere;
+    private 
+    private 
+    private 
+    private 
+    private 
+    private 
+    private 
     
-    
+            
 }
