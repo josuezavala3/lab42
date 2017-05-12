@@ -9,6 +9,9 @@ package lab4;
  *
  * @author HP
  */
-public class cliente {
-    
+public class cliente extends persona {
+    private int dinero;
+    private Date fehca;
+    private int producto;
+
 }

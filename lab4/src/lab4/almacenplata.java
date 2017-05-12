@@ -11,5 +11,27 @@ package lab4;
  */
 public class almacenplata extends almacen {
     private int mayorclientes;
+
+    public almacenplata(int mayorclientes, double tamano, int altura) {
+        super(tamano, altura);
+        this.mayorclientes = mayorclientes;
+    }
+
+    public almacenplata() {
+        super();
+    }
+
+    public int getMayorclientes() {
+        return mayorclientes;
+    }
+
+    public void setMayorclientes(int mayorclientes) {
+        this.mayorclientes = mayorclientes;
+    }
+
+    @Override
+    public String toString() {
+        return "almacenplata{" + "mayorclientes=" + mayorclientes + '}';
+    }
     
 }

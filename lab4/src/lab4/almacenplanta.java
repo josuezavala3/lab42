@@ -11,5 +11,27 @@ package lab4;
  */
 public class almacenplanta extends almacen {
     private int plant;
+
+    public almacenplanta() {
+        super();
+    }
+
+    public almacenplanta(int plant, double tamano, int altura) {
+        super(tamano, altura);
+        this.plant = plant;
+    }
+
+    public int getPlant() {
+        return plant;
+    }
+
+    public void setPlant(int plant) {
+        this.plant = plant;
+    }
+
+    @Override
+    public String toString() {
+        return "almacenplanta{" + "plant=" + plant + '}';
+    }
    
 }

@@ -1,14 +1,16 @@
 package lab4;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Lab4 {
 
-    ArrayList <empleado> empleados = new ArrayList();
-    ArrayList <almacen> almacenes=new ArrayList();
-    
+    static ArrayList<persona> persona = new ArrayList();
+    static ArrayList<almacen> almacenes = new ArrayList();
+    static ArrayList<producto> pro = new ArrayList();
+
     public static void main(String[] args) {
         char r = 's';
         while (r == 's' || r == 'S') {
@@ -49,17 +51,35 @@ public class Lab4 {
                             System.out.println("1. Agregar almacen de planta");
                             System.out.println("2. Agregar almacen regional");
                             System.out.println("3. Agreagar alamacen de plataforma");
-                            System.out.println("4. Agrgar almacen temporal");
+                            System.out.println("4. Agregar almacen temporal");
                             System.out.println("5. Volver al menu");
                             int opcion2 = sc.nextInt();
-
                             if (opcion2 == 1) {
-
+                                System.out.println("tamaño?");
+                                double tamamo = sc.nextInt();
+                                System.out.println("Altuta");
+                                int altura = sc.nextInt();
+                                System.out.println("Numero de plantas");
+                                int numero = sc.nextInt();
+                                almacenes.add(new almacenplanta(numero, tamamo, altura));
                             } else if (opcion2 == 2) {
-
+                                System.out.println("tamaño?");
+                                double tamamo = sc.nextInt();
+                                System.out.println("Altuta");
+                                int altura = sc.nextInt();
+                                System.out.println("Departamento?");
+                                String departamento = sc.nextLine();
+                                almacenes.add(new almacenregiio(departamento, tamamo, altura));
                             } else if (opcion2 == 3) {
-
+                                System.out.println("tamaño?");
+                                double tamamo = sc.nextInt();
+                                System.out.println("Altuta");
+                                int altura = sc.nextInt();
+                                System.out.println("numero mayor de clientes?");
+                                int numeroma = sc.nextInt();
+                                almacenes.add(new almacenplata(numeroma, tamamo, altura));
                             } else if (opcion2 == 4) {
+                                System.out.println("Almacen en mantenimiento");
                             } else {
                                 entro2 = false;
                             }
@@ -77,12 +97,25 @@ public class Lab4 {
                             int opcion2 = sc.nextInt();
 
                             if (opcion2 == 1) {
-
+                                System.out.println("Posicion a modificar ?");
+                                int posi = sc.nextInt();
+                                System.out.println("numero de plantas");
+                                int nume = sc.nextInt();
+                                ((almacenplanta) almacenes.get(posi)).setPlant(posi);
                             } else if (opcion2 == 2) {
-
+                                System.out.println("Posicion a modificar ?");
+                                int posi = sc.nextInt();
+                                System.out.println("departamento");
+                                String nume = sc.nextLine();
+                                ((almacenregiio) almacenes.get(posi)).setNombredep(nume);
                             } else if (opcion2 == 3) {
-
+                                System.out.println("Posicion a modificar ?");
+                                int posi = sc.nextInt();
+                                System.out.println("numero de mayor de clientes");
+                                int nume = sc.nextInt();
+                                ((almacenplata) almacenes.get(posi)).getMayorclientes();
                             } else if (opcion2 == 4) {
+                                System.out.println("En Mmantenimiento");
                             } else {
                                 entro2 = false;
                             }
@@ -92,20 +125,13 @@ public class Lab4 {
 
                         boolean entro2 = true;
                         while (entro2) {
-                            System.out.println("1. eliminar almacen de planta");
-                            System.out.println("2. eliminar almacen regional");
-                            System.out.println("3. eliminar alamacen de plataforma");
-                            System.out.println("4. eliminar almacen temporal");
+                            System.out.println("1. eliminar almacenes");
                             System.out.println("5. Volver al menu");
                             int opcion2 = sc.nextInt();
 
                             if (opcion2 == 1) {
-
-                            } else if (opcion2 == 2) {
-
-                            } else if (opcion2 == 3) {
-
-                            } else if (opcion2 == 4) {
+                                System.out.println("Posicion");
+                                int posicion3 = sc.nextInt();
                             } else {
                                 entro2 = false;
                             }
@@ -163,7 +189,9 @@ public class Lab4 {
                         System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
                         if (opc == 1) {
-                            
+                            System.out.println("1. Empleado de seguridad");
+                            System.out.println("2. Empleado de carga");
+
                         } else if (opc == 2) {
 
                         } else {
@@ -207,11 +235,34 @@ public class Lab4 {
                     System.out.println("4. volver al menu");
                     int opc = sc.nextInt();
                     if (opc == 1) {
-
+                        System.out.println("Vida util en años");
+                        int vida = sc.nextInt();
+                        System.out.println("Presio $?");
+                        int precio = sc.nextInt();
+                        System.out.println("tamaño");
+                        int tamano = sc.nextInt();
+                        System.out.println("Descripcion");
+                        String des = sc.nextLine();
+                        System.out.println("Nombre");
+                        String nombre = sc.nextLine();
+                        System.out.println("numero de producto");
+                        int numerodeproducto = sc.nextInt();
+                        pro.add(new producto(new Date(), vida, precio, tamano, des, nombre, numerodeproducto));
+                        System.out.println("Agregado con exito");
                     } else if (opc == 2) {
+                        System.out.println("Posicionque desea agregar");
+                        int posicion = sc.nextInt();
+                        System.out.println("nuevo precio");
+                        int nuevo = sc.nextInt();
+                        System.out.println("numero de producto");
+                        int numero = sc.nextInt();
+                        pro.get(posicion).setPrecio(nuevo);
+                        pro.get(posicion).setNumeroProductos(numero);
 
                     } else if (opc == 3) {
-
+                        System.out.println("posicion a eliminar");
+                        int final3 = sc.nextInt();
+                        pro.remove(final3);
                     } else {
 
                     }

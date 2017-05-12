@@ -17,6 +17,10 @@ public class producto{
     private String nombre;
     private int numeroProductos;
 
+    public producto() {
+        super();
+    }
+
     public producto(Date fechaEmision, int vidaUtil, int precio, int tamaño, String descripcion, String nombre, int numeroProductos) {
         this.fechaEmision = fechaEmision;
         this.vidaUtil = vidaUtil;

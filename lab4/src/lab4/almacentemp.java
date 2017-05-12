@@ -10,7 +10,5 @@ package lab4;
  * @author HP
  */
 public class almacentemp {
-    char r= 's';
-
 
 }
