@@ -12,22 +12,17 @@ import java.util.Date;
  *
  * @author HP
  */
-public class empleadosegu extends persona{
+public class empleadosegu extends empleado{
     
     private antirobo claves;
     private Date dia;
 
-    public empleadosegu(String contraseña, String clave, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
-        super(nombre, ID, edad, alura, peso, residencia);
+    public empleadosegu(String contraseña, String clave, Date dia, int sueldo, String nombre, int ID, int edad, int alura, int peso, String residencia) {
+        super(sueldo, nombre, ID, edad, alura, peso, residencia);
         this.claves = new antirobo(contraseña, clave);
         this.dia = dia;
     }
 
-    public empleadosegu(antirobo claves, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
-        super(nombre, ID, edad, alura, peso, residencia);
-        this.claves = claves;
-        this.dia = dia;
-    }
 
     public antirobo getClaves() {
         return claves;

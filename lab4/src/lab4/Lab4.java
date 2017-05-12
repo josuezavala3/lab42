@@ -1,13 +1,14 @@
 package lab4;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Lab4 {
 
-    ArrayList<empleado> empleados = new ArrayList();
-    ArrayList<almacen> almacenes = new ArrayList();
+    static ArrayList<empleado> empleados = new ArrayList();
+    static ArrayList<almacen> almacenes = new ArrayList();
 
     public static void main(String[] args) {
         char r = 's';
@@ -167,27 +168,36 @@ public class Lab4 {
                             System.out.println("2. Carga");
                             int op = sc.nextInt();
                             if (op == 1) {
-                                boolean bandera=false;
-                                do{
-                                try {
-                                    System.out.println("Ingrese nombre:");
-                                    String nombre = sc.next();
-                                    System.out.println("Ingrese ID");
-                                    int ID = sc.nextInt();
-                                    System.out.println("Ingrese edad:");
-                                    int edad = sc.nextInt();
-                                    System.out.println("Ingrese altura");
-                                    int altura=sc.nextInt();
-                                    System.out.println("Ingrese peso");
-                                    int peso=sc.nextInt();
-                                    System.out.println("Ingrese redidencia");
-                                    String residencia=sc.next();
-                                    validar(edad);
-                                } catch (Excepciones e) {
-                                    bandera=true;
-                                }
-                                }while(bandera);
-                                empleados.add(new empleadosegu(contraseña, clave, dia, nombre, ID, edad, altura, peso, residencia));
+                                boolean bandera = false;
+                                do {
+                                    try {
+                                        System.out.println("Ingrese nombre:");
+                                        String nombre = sc.next();
+                                        System.out.println("Ingrese ID");
+                                        int ID = sc.nextInt();
+                                        System.out.println("Ingrese edad:");
+                                        int edad = sc.nextInt();
+                                        System.out.println("Ingrese altura");
+                                        int altura = sc.nextInt();
+                                        System.out.println("Ingrese peso");
+                                        int peso = sc.nextInt();
+                                        System.out.println("Ingrese redidencia");
+                                        String residencia = sc.next();
+                                        System.out.println("Ingrese contraseña");
+                                        sc.nextLine();
+                                        String contraseña = sc.nextLine();
+                                        System.out.println("Ingrese clave");
+                                        sc.nextLine();
+                                        String clave = sc.nextLine();
+                                        Date dia = new Date();
+                                        System.out.println("Ingrese sueldo");
+                                        int sueldo=sc.nextInt();
+                                        validar(edad);
+                                        empleados.add(new empleadosegu(contraseña, clave, dia, sueldo, nombre, ID, edad, altura, peso, residencia));
+                                    } catch (Excepciones e) {
+                                        bandera = true;
+                                    }
+                                } while (bandera);
                             } else if (op == 2) {
 
                             } else {
