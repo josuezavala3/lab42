@@ -11,4 +11,7 @@ package lab4;
  */
 public class empleadosegu {
     
+    private int claves;
+    private int Date dia;
+    
 }

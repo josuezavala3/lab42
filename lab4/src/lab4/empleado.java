@@ -9,6 +9,29 @@ package lab4;
  *
  * @author HP
  */
-public class empleado {
+public class empleado extends persona{
+    
+    private int sueldo;
+
+    public empleado(int sueldo, String nombre, int ID, int edad, int alura, int peso, String residencia) {
+        super(nombre, ID, edad, alura, peso, residencia);
+        this.sueldo = sueldo;
+    }
+
+    
+
+    public int getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(int sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    @Override
+    public String toString() {
+        return "empleado{" + "sueldo=" + sueldo + '}';
+    }
+    
     
 }
