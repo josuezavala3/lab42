@@ -14,13 +14,45 @@ import java.util.Date;
  */
 public class empleadosegu extends persona{
     
-    private ArrayList<antirobo> claves;
+    private antirobo claves;
     private Date dia;
 
-    public empleadosegu(int contraseña, int clave, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
+    public empleadosegu(String contraseña, String clave, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
         super(nombre, ID, edad, alura, peso, residencia);
-        this.claves = 
+        this.claves = new antirobo(contraseña, clave);
         this.dia = dia;
+    }
+
+    public empleadosegu(antirobo claves, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
+        super(nombre, ID, edad, alura, peso, residencia);
+        this.claves = claves;
+        this.dia = dia;
+    }
+
+    public antirobo getClaves() {
+        return claves;
+    }
+
+    public void setClaves(antirobo claves) {
+        this.claves = claves;
+    }
+
+    public Date getDia() {
+        return dia;
+    }
+
+    public void setDia(Date dia) {
+        this.dia = dia;
+    }
+
+    @Override
+    public String toString() {
+        return "empleadosegu{" + "claves=" + claves + ", dia=" + dia + '}';
+    }
+
+    @Override
+    public void modificar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

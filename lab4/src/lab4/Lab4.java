@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class Lab4 {
 
-    ArrayList <empleado> empleados = new ArrayList();
-    ArrayList <almacen> almacenes=new ArrayList();
-    
+    ArrayList<empleado> empleados = new ArrayList();
+    ArrayList<almacen> almacenes = new ArrayList();
+
     public static void main(String[] args) {
         char r = 's';
         while (r == 's' || r == 'S') {
@@ -163,7 +163,36 @@ public class Lab4 {
                         System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
                         if (opc == 1) {
-                            
+                            System.out.println("1. Seguridad");
+                            System.out.println("2. Carga");
+                            int op = sc.nextInt();
+                            if (op == 1) {
+                                boolean bandera=false;
+                                do{
+                                try {
+                                    System.out.println("Ingrese nombre:");
+                                    String nombre = sc.next();
+                                    System.out.println("Ingrese ID");
+                                    int ID = sc.nextInt();
+                                    System.out.println("Ingrese edad:");
+                                    int edad = sc.nextInt();
+                                    System.out.println("Ingrese altura");
+                                    int altura=sc.nextInt();
+                                    System.out.println("Ingrese peso");
+                                    int peso=sc.nextInt();
+                                    System.out.println("Ingrese redidencia");
+                                    String residencia=sc.next();
+                                    validar(edad);
+                                } catch (Excepciones e) {
+                                    bandera=true;
+                                }
+                                }while(bandera);
+                                empleados.add(new empleadosegu(contraseña, clave, dia, nombre, ID, edad, altura, peso, residencia));
+                            } else if (op == 2) {
+
+                            } else {
+
+                            }
                         } else if (opc == 2) {
 
                         } else {
@@ -228,4 +257,9 @@ public class Lab4 {
 
     }
 
+    public static void validar(int edad) throws Excepciones {
+        if (edad < 18) {
+            throw new Excepciones("La edad debe ser mayor o igual a 18.");
+        }
+    }
 }
