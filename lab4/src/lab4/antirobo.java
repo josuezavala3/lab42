@@ -12,7 +12,7 @@ package lab4;
 public class antirobo {
     
     private String vigenere;
-    private 
+    private String adelantar;
     private 
     private 
     private 
