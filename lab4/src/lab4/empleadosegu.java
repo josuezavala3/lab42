@@ -7,6 +7,7 @@ package lab4;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 /**
  *
@@ -17,17 +18,10 @@ public class empleadosegu extends empleado{
     private antirobo claves;
     private Date dia;
 
-<<<<<<< HEAD
-    public empleadosegu(int contraseña, int clave, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
-        super(nombre, ID, edad, alura, peso, residencia);
-        this.claves = 
-        
-=======
     public empleadosegu(String contraseña, String clave, Date dia, int sueldo, String nombre, int ID, int edad, int alura, int peso, String residencia) {
         super(sueldo, nombre, ID, edad, alura, peso, residencia);
         this.claves = new antirobo(contraseña, clave);
         this.dia = dia;
->>>>>>> 29d8ed493fe262e1325e3b6b4f8962c152eb868f
     }
 
 
@@ -54,7 +48,18 @@ public class empleadosegu extends empleado{
 
     @Override
     public void modificar() {
-        
+        Scanner sc=new Scanner (System.in);
+        System.out.println("Ingrese nuevo sueldo");
+        int sueldo=sc.nextInt();
+        System.out.println("Ingrese nuevo nombre");
+        String nombre=sc.next();
+        System.out.println("Ingrese nuevo ID");
+        int ID=sc.nextInt();
+        System.out.println("Ingrese nueva altura");
+        int alura=sc.nextInt();
+        System.out.println("Ingrese nuevo peso");
+        super.peso=sc.nextInt();
+        String residencia;
     }
 
     

@@ -11,12 +11,12 @@ package lab4;
  */
 public abstract class persona {
     
-    private String nombre;
-    private int ID;
-    private int edad;
-    private int altura;
-    private int peso;
-    private String residencia;
+    protected String nombre;
+    protected int ID;
+    protected int edad;
+    protected int altura;
+    protected int peso;
+    protected String residencia;
 
     public persona(String nombre, int ID, int edad, int alura, int peso, String residencia) {
         this.nombre = nombre;
