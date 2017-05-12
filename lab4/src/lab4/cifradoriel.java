@@ -9,9 +9,12 @@ package lab4;
  *
  * @author HP
  */
-public class cliente extends persona {
-    private int dinero;
-    private Date fehca;
-    private int producto;
+public class cifradoriel {
 
+    private int[] matriz(String clave) {
+        for (int i = 0; i < 10; i++) {
+            
+        }
+        return null;
+    }
 }
