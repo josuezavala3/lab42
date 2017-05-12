@@ -5,6 +5,7 @@
  */
 package lab4;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -13,35 +14,16 @@ import java.util.Date;
  */
 public class empleadosegu extends persona{
     
-    private int claves;
+    private ArrayList<antirobo> claves;
     private Date dia;
 
-    public empleadosegu(int claves, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
+    public empleadosegu(int contraseña, int clave, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
         super(nombre, ID, edad, alura, peso, residencia);
-        this.claves = claves;
+        this.claves = 
         this.dia = dia;
     }
 
-    public int getClaves() {
-        return claves;
-    }
-
-    public void setClaves(int claves) {
-        this.claves = claves;
-    }
-
-    public Date getDia() {
-        return dia;
-    }
-
-    public void setDia(Date dia) {
-        this.dia = dia;
-    }
-
-    @Override
-    public String toString() {
-        return "empleadosegu{" + "claves=" + claves + ", dia=" + dia + '}';
-    }
+    
     
     
 }
