@@ -17,19 +17,13 @@ public class empleadosegu extends empleado{
     private antirobo claves;
     private Date dia;
 
-<<<<<<< HEAD
-    public empleadosegu(int contraseña, int clave, Date dia, String nombre, int ID, int edad, int alura, int peso, String residencia) {
-        super(nombre, ID, edad, alura, peso, residencia);
-        this.claves = 
-        
-=======
-    public empleadosegu(String contraseña, String clave, Date dia, int sueldo, String nombre, int ID, int edad, int alura, int peso, String residencia) {
+    public empleadosegu(int sueldo, String nombre, int ID, int edad, int alura, int peso, String residencia) {
         super(sueldo, nombre, ID, edad, alura, peso, residencia);
-        this.claves = new antirobo(contraseña, clave);
-        this.dia = dia;
->>>>>>> 29d8ed493fe262e1325e3b6b4f8962c152eb868f
     }
 
+    empleadosegu(String contraseña, String clave, Date dia, int sueldo, String nombre, int ID, int edad, int altura, int peso, String residencia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public antirobo getClaves() {
         return claves;
