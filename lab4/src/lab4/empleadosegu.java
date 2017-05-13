@@ -50,16 +50,17 @@ public class empleadosegu extends empleado{
     public void modificar() {
         Scanner sc=new Scanner (System.in);
         System.out.println("Ingrese nuevo sueldo");
-        int sueldo=sc.nextInt();
+        super.sueldo=sc.nextInt();
         System.out.println("Ingrese nuevo nombre");
-        String nombre=sc.next();
+        super.nombre=sc.next();
         System.out.println("Ingrese nuevo ID");
-        int ID=sc.nextInt();
+        super.ID=sc.nextInt();
         System.out.println("Ingrese nueva altura");
-        int alura=sc.nextInt();
+        super.altura=sc.nextInt();
         System.out.println("Ingrese nuevo peso");
         super.peso=sc.nextInt();
-        String residencia;
+        sc.nextLine();
+        super.residencia=sc.nextLine();
     }
 
     

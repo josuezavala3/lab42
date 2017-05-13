@@ -7,14 +7,10 @@ import java.util.Scanner;
 
 public class Lab4 {
 
-<<<<<<< HEAD
-    static ArrayList<persona> persona = new ArrayList();
+    static ArrayList<cliente> clientes = new ArrayList();
     static ArrayList<almacen> almacenes = new ArrayList();
     static ArrayList<producto> pro = new ArrayList();
-=======
     static ArrayList<empleado> empleados = new ArrayList();
-    static ArrayList<almacen> almacenes = new ArrayList();
->>>>>>> 29d8ed493fe262e1325e3b6b4f8962c152eb868f
 
     public static void main(String[] args) {
         char r = 's';
@@ -194,11 +190,6 @@ public class Lab4 {
                         System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
                         if (opc == 1) {
-<<<<<<< HEAD
-                            System.out.println("1. Empleado de seguridad");
-                            System.out.println("2. Empleado de carga");
-
-=======
                             System.out.println("1. Seguridad");
                             System.out.println("2. Carga");
                             int op = sc.nextInt();
@@ -226,7 +217,7 @@ public class Lab4 {
                                         String clave = sc.nextLine();
                                         Date dia = new Date();
                                         System.out.println("Ingrese sueldo");
-                                        int sueldo=sc.nextInt();
+                                        int sueldo = sc.nextInt();
                                         validar(edad);
                                         empleados.add(new empleadosegu(contraseña, clave, dia, sueldo, nombre, ID, edad, altura, peso, residencia));
                                     } catch (Excepciones e) {
@@ -234,13 +225,67 @@ public class Lab4 {
                                     }
                                 } while (bandera);
                             } else if (op == 2) {
-                                
+                                boolean bandera = false;
+                                do {
+                                    try {
+                                        System.out.println("Ingrese nombre:");
+                                        String nombre = sc.next();
+                                        System.out.println("Ingrese ID");
+                                        int ID = sc.nextInt();
+                                        System.out.println("Ingrese edad:");
+                                        int edad = sc.nextInt();
+                                        System.out.println("Ingrese altura");
+                                        int altura = sc.nextInt();
+                                        System.out.println("Ingrese peso");
+                                        int peso = sc.nextInt();
+                                        System.out.println("Ingrese redidencia");
+                                        String residencia = sc.next();
+                                        System.out.println("Ingrese contraseña");
+                                        sc.nextLine();
+                                        String contraseña = sc.nextLine();
+                                        System.out.println("Ingrese clave");
+                                        sc.nextLine();
+                                        String clave = sc.nextLine();
+                                        Date fecha = new Date();
+                                        System.out.println("Ingrese sueldo");
+                                        int sueldo = sc.nextInt();
+                                        System.out.println("Ingrese hora entrada");
+                                        int horaEntrada = sc.nextInt();
+                                        System.out.println("Ingrese hora salida");
+                                        int horaSalida = sc.nextInt();
+                                        validar(edad);
+                                        empleados.add(new empleadcarga(contraseña, clave, horaEntrada, horaSalida, fecha, sueldo, nombre, ID, edad, altura, peso, residencia));
+                                    } catch (Excepciones e) {
+                                        bandera = true;
+                                    }
+                                } while (bandera);
                             } else {
 
                             }
->>>>>>> 29d8ed493fe262e1325e3b6b4f8962c152eb868f
                         } else if (opc == 2) {
-
+                            boolean bandera = false;
+                            do {
+                                try {
+                                    System.out.println("Ingrese nombre:");
+                                    String nombre = sc.next();
+                                    System.out.println("Ingrese ID");
+                                    int ID = sc.nextInt();
+                                    System.out.println("Ingrese edad:");
+                                    int edad = sc.nextInt();
+                                    System.out.println("Ingrese altura");
+                                    int altura = sc.nextInt();
+                                    System.out.println("Ingrese peso");
+                                    int peso = sc.nextInt();
+                                    System.out.println("Ingrese redidencia");
+                                    String residencia = sc.next();
+                                    System.out.println("Ingrese dinero en bolsa");
+                                    int dinero = sc.nextInt();
+                                    validar(edad);
+                                    clientes.add(new cliente(dinero, nombre, ID, edad, altura, peso, residencia));
+                                } catch (Excepciones e) {
+                                    bandera = true;
+                                }
+                            } while (bandera);
                         } else {
 
                         }
@@ -251,7 +296,13 @@ public class Lab4 {
                         System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
                         if (opc == 1) {
-
+                            System.out.println("Que empleado desea modificar?");
+                            int resp = sc.nextInt();
+                            if (resp < 0 || resp > empleados.size()) {
+                                System.out.println("La persona no existe");
+                            } else {
+                                empleados.get(resp).modificar();
+                            }
                         } else if (opc == 2) {
 
                         } else {
@@ -263,7 +314,13 @@ public class Lab4 {
                         System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
                         if (opc == 1) {
-
+                            System.out.println("Que empleado desea eliminar?");
+                            int resp = sc.nextInt();
+                            if (resp < 0 || resp > empleados.size()) {
+                                System.out.println("La persona no existe");
+                            } else {
+                                empleados.remove(resp);
+                            }
                         } else if (opc == 2) {
 
                         } else {

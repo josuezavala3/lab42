@@ -9,9 +9,9 @@ package lab4;
  *
  * @author HP
  */
-public class empleado extends persona{
+public abstract class empleado extends persona{
     
-    private int sueldo;
+    protected int sueldo;
 
     public empleado(int sueldo, String nombre, int ID, int edad, int alura, int peso, String residencia) {
         super(nombre, ID, edad, alura, peso, residencia);
@@ -34,9 +34,7 @@ public class empleado extends persona{
     }
 
     @Override
-    public void modificar() {
-        
-    }
+    public abstract void modificar();
     
     
 }

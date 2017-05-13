@@ -5,13 +5,27 @@
  */
 package lab4;
 
+import java.util.Date;
+
 /**
  *
  * @author HP
  */
 public class cliente extends persona {
     private int dinero;
-    private Date fehca;
-    private int producto;
+    private Date fecha=new Date();
+    private int producto=0;
+
+    public cliente(int dinero, String nombre, int ID, int edad, int alura, int peso, String residencia) {
+        super(nombre, ID, edad, alura, peso, residencia);
+        this.dinero = dinero;
+    }
+
+    
+    
+    @Override
+    public void modificar() {
+        
+    }
 
 }
