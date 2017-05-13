@@ -22,11 +22,6 @@ public class cliente extends persona {
     }
 
     
-    
-    @Override
-    public void modificar() {
-        
-    }
 
     public cliente(String nombre, int ID, int edad, int alura, int peso, String residencia) {
         super(nombre, ID, edad, alura, peso, residencia);
