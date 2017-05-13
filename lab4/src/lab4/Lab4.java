@@ -36,7 +36,13 @@ public class Lab4 {
 
             }
             if (opcion == 1) {
-
+                int empleado;
+                do{
+                System.out.println("Que empleado desea ingresar?");
+                empleado=sc.nextInt();
+                }while(empleado<0 || empleado>empleados.size());
+                boolean empleadoVal=empleados.get(empleado).permiso();
+                while(empleadoVal){
                 if (entro) {
                     System.out.println("1. Agregar ");
                     System.out.println("2. Modificar");
@@ -203,9 +209,10 @@ public class Lab4 {
                     } else {
                         entro = false;
                     }
-
+                    break;
                 } else {
                     System.out.println("Alerta Datos incorrectos");
+                }
                 }
             } else if (opcion == 2) {
                 boolean persona = true;

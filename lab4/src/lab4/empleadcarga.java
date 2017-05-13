@@ -25,6 +25,7 @@ public class empleadcarga extends empleado {
         this.horaSalida = horaSalida;
         this.fechaInicio = fechaInicio;
         this.claves = new antirobo(contraseña, clave);
+        System.out.println(claves);
     }
 
     public int getHoraEntrada() {
@@ -58,8 +59,8 @@ public class empleadcarga extends empleado {
 
     @Override
     public void modificar() {
-        Scanner sc=new Scanner(System.in);
-        
+        Scanner sc = new Scanner(System.in);
+
         System.out.println("Ingrese nombre:");
         super.nombre = sc.next();
         System.out.println("Ingrese ID");
@@ -77,5 +78,37 @@ public class empleadcarga extends empleado {
         System.out.println("Ingrese hora salida");
         this.horaSalida = sc.nextInt();
     }
+
+    @Override
+    public boolean permiso() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingrese contraseña codificada para vigenere");
+        sc.nextLine();
+        String contraseñaVig = sc.nextLine();
+        System.out.println("Ingrese clave para vigenere");
+        sc.nextLine();
+        String claveVig = sc.nextLine();
+        System.out.println("Ingrese contraseña codificada para adelantar");
+        sc.nextLine();
+        String contraseñaAdel = sc.nextLine();
+        System.out.println("Ingrese contraseña codificada para binario");
+        sc.nextLine();
+        String contraseñaBin = sc.nextLine();
+        boolean adelantar = false;
+        for (int i = 0; i < 10; i++) {
+            if (new adelantar().decoAdelantar(contraseñaAdel, i).equals(claves.getAdelantar())) {
+                adelantar = true;
+                break;
+            }
+        }
+        if (new cifradoVigenere().decoVigenere(contraseñaVig, claveVig).equals(claves.getVigenere()) && adelantar && new binario().decoBinario(contraseñaBin).equals(claves.getBinario())) {
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+    
 
 }

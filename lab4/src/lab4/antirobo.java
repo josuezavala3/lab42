@@ -21,6 +21,35 @@ public class antirobo {
         binario=new binario().binario(contraseña);
                 
     }
+
+    public String getVigenere() {
+        return vigenere;
+    }
+
+    public void setVigenere(String vigenere) {
+        this.vigenere = vigenere;
+    }
+
+    public String getAdelantar() {
+        return adelantar;
+    }
+
+    public void setAdelantar(String adelantar) {
+        this.adelantar = adelantar;
+    }
+
+    public String getBinario() {
+        return binario;
+    }
+
+    public void setBinario(String binario) {
+        this.binario = binario;
+    }
+
+    @Override
+    public String toString() {
+        return "antirobo{" + "vigenere=" + vigenere + ", adelantar=" + adelantar + ", binario=" + binario + '}';
+    }
     
     
             

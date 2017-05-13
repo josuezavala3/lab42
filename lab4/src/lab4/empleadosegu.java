@@ -22,6 +22,7 @@ public class empleadosegu extends empleado{
         super(sueldo, nombre, ID, edad, alura, peso, residencia);
         this.claves = new antirobo(contraseña, clave);
         this.dia = dia;
+        System.out.println(claves);
     }
 
 
@@ -61,6 +62,37 @@ public class empleadosegu extends empleado{
         super.peso=sc.nextInt();
         sc.nextLine();
         super.residencia=sc.nextLine();
+    }
+
+    @Override
+    public boolean permiso() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingrese contraseña codificada para vigenere");
+        sc.nextLine();
+        String contraseñaVig = sc.nextLine();
+        System.out.println("Ingrese clave para vigenere");
+        sc.nextLine();
+        String claveVig = sc.nextLine();
+        System.out.println("Ingrese contraseña codificada para adelantar");
+        sc.nextLine();
+        String contraseñaAdel = sc.nextLine();
+        System.out.println("Ingrese contraseña codificada para binario");
+        sc.nextLine();
+        String contraseñaBin = sc.nextLine();
+        boolean adelantar = false;
+        for (int i = 0; i < 10; i++) {
+            if (new adelantar().decoAdelantar(contraseñaAdel, i).equals(claves.getAdelantar())) {
+                adelantar = true;
+                break;
+            }
+        }
+        if (new cifradoVigenere().decoVigenere(contraseñaVig, claveVig).equals(claves.getVigenere()) && adelantar && new binario().decoBinario(contraseñaBin).equals(claves.getBinario())) {
+            return true;
+        }else{
+            return false;
+        }
+        
     }
 
     

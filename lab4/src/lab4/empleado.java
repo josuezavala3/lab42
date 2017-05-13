@@ -18,7 +18,7 @@ public abstract class empleado extends persona{
         this.sueldo = sueldo;
     }
 
-    
+    public abstract boolean permiso();
 
     public int getSueldo() {
         return sueldo;
