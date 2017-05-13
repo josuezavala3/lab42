@@ -28,4 +28,13 @@ public class cliente extends persona {
         
     }
 
+    public cliente(String nombre, int ID, int edad, int alura, int peso, String residencia) {
+        super(nombre, ID, edad, alura, peso, residencia);
+    }
+
+    @Override
+    public void modificar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

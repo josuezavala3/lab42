@@ -6,7 +6,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Lab4 {
-
+    
     static ArrayList<cliente> clientes = new ArrayList();
     static ArrayList<almacen> almacenes = new ArrayList();
     static ArrayList<producto> pro = new ArrayList();
@@ -43,7 +43,18 @@ public class Lab4 {
                     System.out.println("3. Eliminar");
                     System.out.println("4. Tranferir");
                     System.out.println("5. Volver al menu");
-                    int opealmace = sc.nextInt();
+                    int opealmace = 0;
+                    entro = true;
+                    while (entro) {
+                        try {
+                            System.out.println("Ingrese numero de opcion: ");
+                            opealmace = sc.nextInt();
+                            entro = false;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Ingrese opcion correcta");
+                            sc = new Scanner(System.in);
+                        }
+                    }
                     if (opealmace == 1) {
 
                         boolean entro2 = true;
@@ -54,7 +65,18 @@ public class Lab4 {
                             System.out.println("3. Agreagar alamacen de plataforma");
                             System.out.println("4. Agregar almacen temporal");
                             System.out.println("5. Volver al menu");
-                            int opcion2 = sc.nextInt();
+                            int opcion2 = 0;
+                            entro = true;
+                            while (entro) {
+                                try {
+                                    System.out.println("Ingrese numero de opcion: ");
+                                    opcion2 = sc.nextInt();
+                                    entro = false;
+                                } catch (InputMismatchException e) {
+                                    System.out.println("Ingrese opcion correcta");
+                                    sc = new Scanner(System.in);
+                                }
+                            }
                             if (opcion2 == 1) {
                                 System.out.println("tamaño?");
                                 double tamamo = sc.nextInt();
@@ -95,8 +117,18 @@ public class Lab4 {
                             System.out.println("3. modificar alamacen de plataforma");
                             System.out.println("4. modificar almacen temporal");
                             System.out.println("5. Volver al menu");
-                            int opcion2 = sc.nextInt();
-
+                            int opcion2 = 0;
+                            entro = true;
+                            while (entro) {
+                                try {
+                                    System.out.println("Ingrese numero de opcion: ");
+                                    opcion2 = sc.nextInt();
+                                    entro = false;
+                                } catch (InputMismatchException e) {
+                                    System.out.println("Ingrese opcion correcta");
+                                    sc = new Scanner(System.in);
+                                }
+                            }
                             if (opcion2 == 1) {
                                 System.out.println("Posicion a modificar ?");
                                 int posi = sc.nextInt();
@@ -145,8 +177,18 @@ public class Lab4 {
                             System.out.println("3. tranferir alamacen de plataforma");
                             System.out.println("4. tranferir almacen temporal");
                             System.out.println("5. Volver al menu");
-                            int opcion2 = sc.nextInt();
-
+                            int opcion2 = 0;
+                            entro = true;
+                            while (entro) {
+                                try {
+                                    System.out.println("Ingrese numero de opcion: ");
+                                    opcion2 = sc.nextInt();
+                                    entro = false;
+                                } catch (InputMismatchException e) {
+                                    System.out.println("Ingrese opcion correcta");
+                                    sc = new Scanner(System.in);
+                                }
+                            }
                             if (opcion2 == 1) {
 
                             } else if (opcion2 == 2) {
@@ -174,6 +216,17 @@ public class Lab4 {
                     System.out.println("4. volver al menu");
                     entro = true;
                     int opcio = 0;
+                    entro = true;
+                    while (entro) {
+                        try {
+                            System.out.println("Ingrese numero de opcion: ");
+                            opcio = sc.nextInt();
+                            entro = false;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Ingrese opcion correcta");
+                            sc = new Scanner(System.in);
+                        }
+                    }
                     while (entro) {
                         try {
                             opcio = sc.nextInt();
@@ -189,9 +242,21 @@ public class Lab4 {
                         System.out.println("2. Agregar cliente");
                         System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
+                         entro=true;
+                        while (entro) {
+                            try {
+                                System.out.println("Ingrese numero de opcion: ");
+                                opc = sc.nextInt();
+                                entro = false;
+                            } catch (InputMismatchException e) {
+                                System.out.println("Ingrese opcion correcta");
+                                sc = new Scanner(System.in);
+                            }
+                        }
                         if (opc == 1) {
-                            System.out.println("1. Seguridad");
-                            System.out.println("2. Carga");
+                            
+                            System.out.println("1. Empleado de seguridad");
+                            System.out.println("2. Empleado de carga");
                             int op = sc.nextInt();
                             if (op == 1) {
                                 boolean bandera = false;
@@ -295,6 +360,17 @@ public class Lab4 {
                         System.out.println("2.Modificar cliente");
                         System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
+                        entro=true;
+                        while (entro) {
+                            try {
+                                System.out.println("Ingrese numero de opcion: ");
+                                opc = sc.nextInt();
+                                entro = false;
+                            } catch (InputMismatchException e) {
+                                System.out.println("Ingrese opcion correcta");
+                                sc = new Scanner(System.in);
+                            }
+                        }
                         if (opc == 1) {
                             System.out.println("Que empleado desea modificar?");
                             int resp = sc.nextInt();
@@ -313,6 +389,17 @@ public class Lab4 {
                         System.out.println("2. Eliminar cliente");
                         System.out.println("3. volver al menu");
                         int opc = sc.nextInt();
+                        entro=true;
+                        while (entro) {
+                            try {
+                                System.out.println("Ingrese numero de opcion: ");
+                                opc = sc.nextInt();
+                                entro = false;
+                            } catch (InputMismatchException e) {
+                                System.out.println("Ingrese opcion correcta");
+                                sc = new Scanner(System.in);
+                            }
+                        }
                         if (opc == 1) {
                             System.out.println("Que empleado desea eliminar?");
                             int resp = sc.nextInt();
@@ -337,7 +424,18 @@ public class Lab4 {
                     System.out.println("2. Modificar producto");
                     System.out.println("3. ELiminar producto");
                     System.out.println("4. volver al menu");
-                    int opc = sc.nextInt();
+                    int opc = 0;
+                    entro = true;
+                    while (entro) {
+                        try {
+                            System.out.println("Ingrese numero de opcion: ");
+                            opc = sc.nextInt();
+                            entro = false;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Ingrese opcion correcta");
+                            sc = new Scanner(System.in);
+                        }
+                    }
                     if (opc == 1) {
                         System.out.println("Vida util en años");
                         int vida = sc.nextInt();
